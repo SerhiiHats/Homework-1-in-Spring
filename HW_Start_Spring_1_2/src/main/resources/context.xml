@@ -1,0 +1,19 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+<bean id="easy" class="modelProperties.iml.QuestEasyImpl"/>
+ <bean id="middle" class="modelProperties.iml.QuestMiddleImpl"/>
+<bean id="heavy" class="modelProperties.iml.QuestHeavyImpl"/>
+    <bean id="questEasy" class="models.Knight">
+        <constructor-arg ref="easy"/>
+    </bean>
+    <bean id="questMiddle" class="models.Knight">
+        <constructor-arg ref="middle"/>
+    </bean>
+    <bean id="questHeavy" class="models.Knight">
+        <constructor-arg ref="heavy"/>
+    </bean>
+
+</beans>
